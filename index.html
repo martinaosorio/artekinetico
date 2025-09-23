@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arte Cinético</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS (ruta relativa con ./ y versión para evitar caché) -->
+  <link rel="stylesheet" href="./css/styles.css?v=1" />
 </head>
 <body>
 
@@ -19,16 +23,26 @@
       </nav>
     </div>
   </div>
+
   <a href="index.html" class="brand-btn" style="text-decoration:none;display:flex;justify-content:center;flex:1;">
     <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
   </a>
+
   <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
-  <nav id="mobile-nav" class="mobile-nav">
+  <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
     <a href="historia.html">Historia</a>
     <a href="artistas.html">Artistas</a>
     <a href="eventos.html">Eventos</a>
   </nav>
 </header>
+
+<!-- ...tu contenido del Home... -->
+
+<!-- JS al final (ruta relativa + versión) -->
+<script src="./js/main.js?v=1" defer></script>
+</body>
+</html>
+
 
 
 <main>

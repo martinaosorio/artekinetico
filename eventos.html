@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventos – Arte Cinético</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-row">
+    <div class="nav-group">
+      <nav class="nav-left">
+        <a href="historia.html">Historia</a>
+        <a href="artistas.html">Artistas</a>
+        <a href="eventos.html" class="active">Eventos</a>
+      </nav>
+
+    </div>
+  </div>
+  <a href="index.html" class="brand-btn" style="text-decoration:none;display:flex;justify-content:center;flex:1;">
+    <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="historia.html">Historia</a>
+    <a href="artistas.html">Artistas</a>
+    <a href="eventos.html" class="active">Eventos</a>
+  </nav>
+</header>
+<main class="eventos-main">
+  <section class="eventos-hero">
+    <h2 class="eventos-title">EVENTOS</h2>
+    <p class="eventos-sub">Descubrí los próximos eventos y exposiciones de arte cinético.</p>
+  </section>
+  <section class="eventos-grid">
+    <div class="evento-card">
+      <img src="evento1.png" alt="Evento 1" />
+      <h3 class="evento-nombre">Expo Cinética 2024</h3>
+      <p class="evento-info">Fecha: 12/07/2024<br>Lugar: Museo Moderno</p>
+      <p class="evento-desc">Una muestra con obras emblemáticas y nuevas propuestas de artistas cinéticos.</p>
+      <p class="evento-precio">Precio: $1200</p>
+      <a href="#" class="evento-btn">Comprar</a>
+    </div>
+    <div class="evento-card">
+      <img src="evento2.png" alt="Evento 2" />
+      <h3 class="evento-nombre">Charla: Movimiento y Luz</h3>
+      <p class="evento-info">Fecha: 20/08/2024<br>Lugar: Centro Cultural</p>
+      <p class="evento-desc">Conferencia sobre la relación entre el arte cinético y la tecnología actual.</p>
+      <p class="evento-precio">Precio: $800</p>
+      <a href="#" class="evento-btn">Comprar</a>
+    </div>
+    <div class="evento-card">
+      <img src="evento3.png" alt="Evento 3" />
+      <h3 class="evento-nombre">Taller: Arte en Movimiento</h3>
+      <p class="evento-info">Fecha: 05/09/2024<br>Lugar: Espacio Creativo</p>
+      <p class="evento-desc">Workshop práctico para experimentar técnicas cinéticas.</p>
+      <p class="evento-precio">Precio: $950</p>
+      <a href="#" class="evento-btn">Comprar</a>
+    </div>
+    <div class="evento-card">
+      <img src="evento4.png" alt="Evento 4" />
+      <h3 class="evento-nombre">Instalación: Luz y Sombra</h3>
+      <p class="evento-info">Fecha: 18/10/2024<br>Lugar: Galería Urbana</p>
+      <p class="evento-desc">Instalación interactiva que explora el movimiento y la percepción visual.</p>
+      <p class="evento-precio">Precio: $1100</p>
+      <a href="#" class="evento-btn">Comprar</a>
+    </div>
+  </section>
+</main>
+<footer class="main-footer">
+  <div class="footer-left">
+    <a href="#">Soporte</a>
+    <a href="#">Faqs</a>
+    <p>Instagram: <strong>@arte.cinético</strong></p>
+  </div>
+  <div class="footer-center">
+    <p class="cta">Unite al movimiento del arte</p>
+    <form class="newsletter" novalidate>
+      <input type="email" placeholder="Ingresa tu mail aquí*" required>
+      <button type="submit">Unirse</button>
+      <span class="form-msg" aria-live="polite"></span>
+    </form>
+  </div>
+  <div class="footer-right"><!-- vacío (espacio como en tu diseño) --></div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

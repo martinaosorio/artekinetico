@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar Tickets – Arte Cinético</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-row">
+    <div class="nav-group">
+      <nav class="nav-left">
+        <a href="historia.html">Historia</a>
+        <a href="artistas.html">Artistas</a>
+        <a href="eventos.html" class="active">Eventos</a>
+      </nav>
+    </div>
+  </div>
+  <a href="index.html" class="brand-btn" style="text-decoration:none;display:flex;justify-content:center;flex:1;">
+    <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="historia.html">Historia</a>
+    <a href="artistas.html">Artistas</a>
+    <a href="eventos.html" class="active">Eventos</a>
+  </nav>
+</header>
+
+<main class="compra-main">
+  <div class="compra-container">
+    <h2 class="compra-title">Finalizar Compra</h2>
+    <p class="compra-subtitle">Completa tus datos para adquirir tus entradas.</p>
+
+    <form id="purchase-form" class="compra-form" novalidate>
+      <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="evento">Evento</label>
+        <select id="evento" name="evento">
+          <option value="expo-cinetica">Expo Cinética 2024</option>
+          <option value="charla-movimiento">Charla: Movimiento y Luz</option>
+          <option value="taller-arte">Taller: Arte en Movimiento</option>
+          <option value="instalacion-luz">Instalación: Luz y Sombra</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cantidad">Cantidad de Entradas</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1" required>
+      </div>
+      <div class="form-group">
+        <label for="tarjeta">Número de Tarjeta</label>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="vencimiento">Vencimiento</label>
+          <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+        </div>
+        <div class="form-group">
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" name="cvc" placeholder="123" required>
+        </div>
+      </div>
+      <button type="submit" class="compra-btn">Pagar</button>
+      <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+    </form>
+  </div>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-left">
+    <a href="#">Soporte</a>
+    <a href="#">Faqs</a>
+    <p>Instagram: <strong>@arte.cinético</strong></p>
+  </div>
+  <div class="footer-center">
+    <p class="cta">Unite al movimiento del arte</p>
+    <form class="newsletter" novalidate>
+      <input type="email" placeholder="Ingresa tu mail aquí*" required>
+      <button type="submit">Unirse</button>
+      <span class="form-msg" aria-live="polite"></span>
+    </form>
+  </div>
+  <div class="footer-right"></div>
+</footer>
+
+<script src="main.js?v=1" defer></script>
+
+</body>
+</html>

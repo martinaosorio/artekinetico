@@ -520,3 +520,122 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
     height: 120px;
   }
 }
+
+/* ------- PÁGINA DE COMPRA ------- */
+.compra-main {
+  padding: 3rem 1rem;
+  background: #f9f7f2; /* Un fondo muy suave */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compra-container {
+  max-width: 550px;
+  width: 100%;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(90, 70, 53, 0.1);
+  border: 1px solid #e6e2db;
+  /* Efecto de entrada */
+  animation: fadeInScale 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.compra-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--brown);
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.compra-subtitle {
+  text-align: center;
+  color: #555;
+  margin: 0 0 2rem;
+}
+
+.compra-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.compra-form .form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.compra-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.compra-form input,
+.compra-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.compra-form input:focus,
+.compra-form select:focus {
+  outline: none;
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(139, 92, 42, 0.2);
+}
+
+.compra-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  /* Reutiliza el estilo del botón de evento */
+  background: var(--brown); color: #fff; font-family: 'Poppins', sans-serif; font-weight: 600; border-radius: 8px; text-decoration: none; transition: background 0.3s, box-shadow 0.3s, transform 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: none; cursor: pointer;
+}
+
+.compra-btn:hover {
+  background: #3b2a18;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.form-feedback {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  min-height: 24px;
+}
+
+@media (max-width: 600px) {
+  .compra-main {
+    padding: 2rem 1rem;
+  }
+  .compra-container {
+    padding: 1.5rem;
+  }
+  .compra-title {
+    font-size: 1.6rem;
+  }
+  .compra-form .form-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}

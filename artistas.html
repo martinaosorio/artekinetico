@@ -6,21 +6,42 @@
   <title>Artistas – Arte Cinético</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=1">
+  <style>
+    #main-title:hover {
+      transform: scale(1.03);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+      transition: transform 0.2s ease-out, text-shadow 0.2s ease-out;
+    }
+    .nav-left a:not(.active):hover, .mobile-nav a:not(.active):hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+      transition: transform 0.2s ease-out, text-shadow 0.2s ease-out;
+    }
+  </style>
 </head>
 <body>
 <header class="main-header">
   <div class="header-row">
-    <div class="nav-group">
-      <nav class="nav-left">
-        <a href="historia.html">Historia</a>
-        <a href="artistas.html" class="active">Artistas</a>
-        <a href="eventos.html">Eventos</a>
-      </nav>
+    <nav class="nav-left">
+      <a href="historia.html">Historia</a>
+      <a href="artistas.html" class="active">Artistas</a>
+      <a href="eventos.html">Eventos</a>
+    </nav>
+    <a href="index.html" class="brand-btn">
+      <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
+    </a>
+    <div class="nav-right">
+      <a href="search.html" class="header-icon-link" aria-label="Buscar">
+        <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><circle cx="11" cy="11" r="5"></circle><circle cx="11" cy="11" r="2"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </a>
+      <a href="#newsletter-section" class="header-icon-link" aria-label="Contacto">
+        <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline><line x1="2" y1="19" x2="22" y2="19"></line><line x1="2" y1="4" x2="22" y2="4"></line></svg>
+      </a>
+      <a href="cart.html" class="header-icon-link" aria-label="Carrito">
+        <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      </a>
     </div>
   </div>
-  <a href="index.html" class="brand-btn" style="text-decoration:none;display:flex;justify-content:center;flex:1;">
-    <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
-  </a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
   <nav id="mobile-nav" class="mobile-nav">
     <a href="historia.html">Historia</a>
@@ -33,38 +54,38 @@
     <aside class="artistas-sidebar">
     </aside>
     <section class="artistas-grid">
-      <div class="artista-card">
+      <a href="alexander-calder.html" class="artista-card">
         <img src="ale.png" alt="Artista 1">
         <p class="artista-nombre">Alexander Calder</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="martha-boto.html" class="artista-card">
         <img src="martha.png" alt="Artista 2">
         <p class="artista-nombre">Martha Boto</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="jesus-rafael-soto.html" class="artista-card">
         <img src="jesus.png" alt="Artista 3">
         <p class="artista-nombre">Jesus Rafael Soto</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="bridget-riley.html" class="artista-card">
         <img src="bridget.png" alt="Artista 4">
         <p class="artista-nombre">Bridget Riley</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="carlos-cruz-diez.html" class="artista-card">
         <img src="carlon.png" alt="Artista 5">
         <p class="artista-nombre">Carlos Cruz-Diez </p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="matilde-perez.html" class="artista-card">
         <img src="matilde.png" alt="Artista 6">
         <p class="artista-nombre">Matilde Perez</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="julio-le-parc.html" class="artista-card">
         <img src="julio.png" alt="Artista 7">
         <p class="artista-nombre">Julio Le Parc</p>
-      </div>
-      <div class="artista-card">
+      </a>
+      <a href="victor-vasarely.html" class="artista-card">
         <img src="victor.png" alt="Artista 8">
         <p class="artista-nombre">Victor Vasarely</p>
-      </div>
+      </a>
     </section>
   </div>
 </main>
@@ -74,14 +95,7 @@
     <a href="#">Faqs</a>
     <p>Instagram: <strong>@arte.cinético</strong></p>
   </div>
-  <div class="footer-center">
-    <p class="cta">Unite al movimiento del arte</p>
-    <form class="newsletter" novalidate>
-      <input type="email" placeholder="Ingresa tu mail aquí*" required>
-      <button type="submit">Unirse</button>
-      <span class="form-msg" aria-live="polite"></span>
-    </form>
-  </div>
+  <div id="newsletter-section" class="footer-center"><p class="cta">Unite al movimiento del arte</p><form class="newsletter" novalidate><input type="email" placeholder="Ingresa tu mail aquí*" required><button type="submit">Unirse</button><span class="form-msg" aria-live="polite"></span></form></div>
   <div class="footer-right"><!-- vacío (espacio como en tu diseño) --></div>
 </footer>
 <script src="main.js?v=1" defer></script>

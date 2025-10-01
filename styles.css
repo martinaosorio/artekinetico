@@ -40,6 +40,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
   display: flex;
   align-items: center;
   gap: 22px;
+  flex-basis: 0;
   margin-left: auto;
 }
 .brand {
@@ -83,16 +84,19 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
-.contact-link {
-  font-size: 1.1rem;
-  font-family: Inter, sans-serif;
-  color: var(--brown) !important;
-  font-weight: 700;
+.header-icon-link {
+  display: inline-block;
+  line-height: 0; /* Para alinear bien la imagen */
 }
-.cart-link {
-  font-size: 1.2rem;
-  color: var(--brown) !important;
-  font-weight: 700;
+.header-icon {
+  height: 24px;
+  width: 24px;
+  transition: transform 0.2s ease-in-out;
+  color: var(--brown); /* Hereda el color principal */
+}
+.header-icon:hover {
+  transform: scale(1.15);
+  color: #3b2a18; /* Un marrón más oscuro al pasar el cursor */
 }
 .nav-toggle {
   display: none;
@@ -241,6 +245,11 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
   font-family:'Belleza', Arial, sans-serif; font-size:16px;
   color:#564434; margin:10px 12px;
 }
+.obra-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 12px 12px;
+}
 
 /* --------------- RESPONSIVE --------------- */
 @media (max-width: 900px){
@@ -330,6 +339,10 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
   font-size: 1.1rem;
   color: var(--brown);
   margin: 0;
+  text-align: center;
+}
+a.artista-card {
+  text-decoration: none;
   text-align: center;
 }
 @media (max-width: 900px) {
@@ -639,3 +652,111 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:
     gap: 1.2rem;
   }
 }
+
+/* ------- PÁGINA DETALLE DE ARTISTA ------- */
+.artista-detalle-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.back-to-artists {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.back-to-artists:hover {
+  color: #3b2a18; /* A darker brown */
+}
+
+.artista-detalle-hero {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.artista-detalle-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.artista-detalle-info .nombre {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: var(--brown);
+  margin: 0 0 1rem;
+}
+
+.artista-detalle-info .bio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.obras-artista-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .artista-detalle-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .artista-detalle-img {
+    max-width: 200px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* ------- MODAL DE IMAGEN ------- */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+  padding: 20px;
+}
+
+.img-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+  animation: zoomIn 0.4s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.img-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.obra-img-clickable { cursor: pointer; }

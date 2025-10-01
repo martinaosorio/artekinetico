@@ -25,28 +25,30 @@ document.querySelectorAll('.newsletter').forEach(form=>{
 });
 
 // Modal para imagen ampliada
-const collageImages = document.querySelectorAll('.collage img');
+const clickableImages = document.querySelectorAll('.collage img, .obra-img-clickable');
 const modal = document.getElementById('img-modal');
 const modalImg = document.getElementById('img-modal-img');
 const modalClose = document.querySelector('.img-modal-close');
 
-collageImages.forEach(img => {
-  img.addEventListener('click', function() {
-    modal.style.display = 'block';
-    modalImg.src = this.src;
-    modalImg.alt = this.alt;
+if (modal && modalImg && modalClose) {
+  clickableImages.forEach(img => {
+    img.addEventListener('click', function() {
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
   });
-});
-modalClose.addEventListener('click', function() {
-  modal.style.display = 'none';
-  modalImg.src = '';
-});
-window.addEventListener('click', function(e) {
-  if (e.target === modal) {
+  modalClose.addEventListener('click', function() {
     modal.style.display = 'none';
     modalImg.src = '';
-  }
-});
+  });
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  });
+}
 
 // Efecto de animación al clickear el título principal
 const mainTitle = document.getElementById('main-title');
@@ -54,5 +56,30 @@ if(mainTitle){
   mainTitle.addEventListener('click', function(){
     mainTitle.classList.add('clicked');
     setTimeout(()=>mainTitle.classList.remove('clicked'), 200);
+  });
+}
+
+// Formulario de compra
+const purchaseForm = document.getElementById('purchase-form');
+
+if (purchaseForm) {
+  const feedbackEl = document.getElementById('form-feedback');
+
+  purchaseForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que la página se recargue
+
+    // Validación simple (podemos hacerla más compleja si quieres)
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+
+    if (nombre.trim() === '' || email.trim() === '') {
+      feedbackEl.textContent = 'Por favor, completa todos los campos.';
+      feedbackEl.style.color = 'crimson';
+      return;
+    }
+
+    feedbackEl.textContent = `¡Gracias por tu compra, ${nombre}! Te enviaremos un recordatorio a ${email}.`;
+    feedbackEl.style.color = 'green';
+    purchaseForm.reset(); // Limpia el formulario
   });
 }

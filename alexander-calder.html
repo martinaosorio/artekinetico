@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comprar Tickets – Arte Cinético</title>
-  <link rel="stylesheet" href="styles.css?v=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexander Calder – Arte Cinético</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
   <style>
     #main-title:hover {
       transform: scale(1.03);
@@ -20,25 +20,27 @@
   </style>
 </head>
 <body>
-
 <header class="main-header">
   <div class="header-row">
     <nav class="nav-left">
       <a href="historia.html">Historia</a>
-      <a href="artistas.html">Artistas</a>
-      <a href="eventos.html" class="active">Eventos</a>
+      <a href="artistas.html" class="active">Artistas</a>
+      <a href="eventos.html">Eventos</a>
     </nav>
     <a href="index.html" class="brand-btn">
       <h1 class="brand" id="main-title">ARTE CINÉTICO</h1>
     </a>
     <div class="nav-right">
       <a href="search.html" class="header-icon-link" aria-label="Buscar">
+        <!-- Ícono de Búsqueda Cinético -->
         <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><circle cx="11" cy="11" r="5"></circle><circle cx="11" cy="11" r="2"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </a>
       <a href="#newsletter-section" class="header-icon-link" aria-label="Contacto">
+        <!-- Ícono de Contacto Cinético -->
         <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline><line x1="2" y1="19" x2="22" y2="19"></line><line x1="2" y1="4" x2="22" y2="4"></line></svg>
       </a>
       <a href="cart.html" class="header-icon-link" aria-label="Carrito">
+        <!-- Ícono de Carrito/Bolsa Cinético -->
         <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
       </a>
     </div>
@@ -46,69 +48,61 @@
   <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">☰</button>
   <nav id="mobile-nav" class="mobile-nav">
     <a href="historia.html">Historia</a>
-    <a href="artistas.html">Artistas</a>
-    <a href="eventos.html" class="active">Eventos</a>
+    <a href="artistas.html" class="active">Artistas</a>
+    <a href="eventos.html">Eventos</a>
   </nav>
 </header>
 
-<main class="compra-main">
-  <div class="compra-container">
-    <h2 class="compra-title">Finalizar Compra</h2>
-    <p class="compra-subtitle">Completa tus datos para adquirir tus entradas.</p>
+<main class="artista-detalle-main">
+  <a href="artistas.html" class="back-to-artists">← Volver a Artistas</a>
+  <section class="artista-detalle-hero">
+    <img src="ale.png" alt="Alexander Calder" class="artista-detalle-img">
+    <div class="artista-detalle-info">
+      <h1 class="nombre">Alexander Calder</h1>
+      <p class="bio">
+        Alexander Calder (1898-1976) fue un escultor estadounidense conocido por ser el inventor del móvil, un tipo de escultura cinética que consiste en elementos suspendidos que se mueven por las corrientes de aire o por un motor. También creó esculturas estáticas monumentales llamadas "stabiles". Su obra revolucionó la escultura moderna al introducir el movimiento y la abstracción de una manera lúdica y poética.
+      </p>
+    </div>
+  </section>
 
-    <form id="purchase-form" class="compra-form" novalidate>
-      <div class="form-group">
-        <label for="nombre">Nombre Completo</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="evento">Evento</label>
-        <select id="evento" name="evento">
-          <option value="expo-cinetica">Expo Cinética 2024</option>
-          <option value="charla-movimiento">Charla: Movimiento y Luz</option>
-          <option value="taller-arte">Taller: Arte en Movimiento</option>
-          <option value="instalacion-luz">Instalación: Luz y Sombra</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="cantidad">Cantidad de Entradas</label>
-        <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1" required>
-      </div>
-      <div class="form-group">
-        <label for="tarjeta">Número de Tarjeta</label>
-        <input type="text" id="tarjeta" name="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="vencimiento">Vencimiento</label>
-          <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
-        </div>
-        <div class="form-group">
-          <label for="cvc">CVC</label>
-          <input type="text" id="cvc" name="cvc" placeholder="123" required>
-        </div>
-      </div>
-      <button type="submit" class="compra-btn">Pagar</button>
-      <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
-    </form>
-  </div>
+  <section class="obras-artista">
+    <h2 class="obras-artista-titulo">Obras Destacadas</h2>
+    <div class="obras-grid">
+      <article class="obra-card">
+        <img src="little spider .png" alt="Obra de Alexander Calder 1" class="obra-img-clickable">
+        <p class="obra-title">Little Spider</p>
+        <p class="obra-desc">Se realizó en el año 1940.</p>
+      </article>
+      <article class="obra-card">
+        <img src="circus.png" alt="Obra de Alexander Calder 2" class="obra-img-clickable">
+        <p class="obra-title">Calder's Circus </p>
+        <p class="obra-desc">Una obra emblemática. Se realizó ne los años 1926- 1931</p>
+      </article>
+      <article class="obra-card">
+        <img src="red ball.png" alt="Obra de Alexander Calder 3" class="obra-img-clickable">
+        <p class="obra-title">Object with Red Ball </p>
+        <p class="obra-desc">Realizada en el año 1931 </p>
+      </article>
+      <article class="obra-card">
+        <img src="alex.png" alt="Obra de Alexander Calder 4" class="obra-img-clickable">
+        <p class="obra-title">Small Feathers </p>
+        <p class="obra-desc">Realizada en 1931. </p>
+      </article>
+    </div>
+  </section>
 </main>
 
+<div id="img-modal" class="img-modal">
+  <span class="img-modal-close">&times;</span>
+  <img class="img-modal-content" id="img-modal-img">
+</div>
+
 <footer class="main-footer">
-  <div class="footer-left">
-    <a href="#">Soporte</a>
-    <a href="#">Faqs</a>
-    <p>Instagram: <strong>@arte.cinético</strong></p>
-  </div>
+  <div class="footer-left"><a href="#">Soporte</a><a href="#">Faqs</a><p>Instagram: <strong>@arte.cinético</strong></p></div>
   <div id="newsletter-section" class="footer-center"><p class="cta">Unite al movimiento del arte</p><form class="newsletter" novalidate><input type="email" placeholder="Ingresa tu mail aquí*" required><button type="submit">Unirse</button><span class="form-msg" aria-live="polite"></span></form></div>
   <div class="footer-right"></div>
 </footer>
 
 <script src="main.js?v=1" defer></script>
-
 </body>
 </html>
